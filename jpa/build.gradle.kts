@@ -41,6 +41,10 @@ dependencies {
 
 	// Development Runtime
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation("com.integralblue:log4jdbc-spring-boot-starter:1.0.2")
+	
+	// DB Driver
+	runtimeOnly("org.postgresql:postgresql")
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

@@ -1,5 +1,5 @@
 # Build variables
-APP_MODULE_PATH=api
+APP_MODULE_PATH=jpa
 APP_PROFILE=demo
 
 # Docker Image variables
