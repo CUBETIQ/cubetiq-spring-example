@@ -1,6 +1,7 @@
 package com.cubetiqs.web.infrastructure.data.domain
 
 import com.cubetiqs.web.infrastructure.data.BaseEntity
+import com.fasterxml.jackson.annotation.JsonBackReference
 import com.fasterxml.jackson.annotation.JsonManagedReference
 import org.hibernate.Hibernate
 import javax.persistence.*
@@ -32,6 +33,10 @@ open class User : BaseEntity() {
     )
     @JsonManagedReference
     open var roles: MutableCollection<Role> = mutableSetOf()
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL], orphanRemoval = true)
+    open var projects: MutableCollection<Project> = mutableListOf()
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
