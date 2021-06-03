@@ -1,4 +1,4 @@
-rootProject.name = "spring-web-modules"
+rootProject.name = "cubetiq-spring-example"
 
 include(
     "jpa"
