@@ -1,5 +1,7 @@
 rootProject.name = "cubetiq-spring-example"
 
 include(
-    "jpa"
+    "jpa",
+    "producer",
+    "consumer"
 )
